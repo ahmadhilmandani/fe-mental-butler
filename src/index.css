@@ -44,7 +44,9 @@
   --color-light: #fffdfa;
   --color-dark: #0c1621;
 }
-
+* {
+  @apply text-sm;
+}
 a {
   @apply text-primary-500 hover:underline;
 }
