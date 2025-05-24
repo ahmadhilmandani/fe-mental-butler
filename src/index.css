@@ -1,50 +1,50 @@
 @import "tailwindcss";
 
 @theme {
-  --color-primary-50:  #EEF8F8;
-  --color-primary-100:  #DDF0F1;
-  --color-primary-200:  #BAE2E3;
-  --color-primary-300:  #98D3D6;
-  --color-primary-400:  #75C5C8;
-  --color-primary-500:  #53B6BA;
-  --color-primary-600:  #429295;
-  --color-primary-700:  #326D70;
-  --color-primary-800:  #21494A;
+  --color-primary-50: #eef8f8;
+  --color-primary-100: #ddf0f1;
+  --color-primary-200: #bae2e3;
+  --color-primary-300: #98d3d6;
+  --color-primary-400: #75c5c8;
+  --color-primary-500: #53b6ba;
+  --color-primary-600: #429295;
+  --color-primary-700: #326d70;
+  --color-primary-800: #21494a;
 
-  --color-success-50:  #EEFAF5;
-  --color-success-100:  #DDF5EB;
-  --color-success-200:  #BCEBD6;
-  --color-success-300:  #9AE0C2;
-  --color-success-400:  #79D6AD;
-  --color-success-500:  #57CC99;
-  --color-success-600:  #46A37A;
-  --color-success-700:  #347A5C;
-  --color-success-800:  #23523D;
+  --color-success-50: #eefaf5;
+  --color-success-100: #ddf5eb;
+  --color-success-200: #bcebd6;
+  --color-success-300: #9ae0c2;
+  --color-success-400: #79d6ad;
+  --color-success-500: #57cc99;
+  --color-success-600: #46a37a;
+  --color-success-700: #347a5c;
+  --color-success-800: #23523d;
 
-  --color-danger-50:  #F7EBED;
-  --color-danger-100:  #F0D8DA;
-  --color-danger-200:  #E0B0B6;
-  --color-danger-300:  #D18991;
-  --color-danger-400:  #C1616D;
-  --color-danger-500:  #B23A48;
-  --color-danger-600:  #8E2E3A;
-  --color-danger-700:  #6B232B;
-  --color-danger-800:  #47171D;
+  --color-danger-50: #f7ebed;
+  --color-danger-100: #f0d8da;
+  --color-danger-200: #e0b0b6;
+  --color-danger-300: #d18991;
+  --color-danger-400: #c1616d;
+  --color-danger-500: #b23a48;
+  --color-danger-600: #8e2e3a;
+  --color-danger-700: #6b232b;
+  --color-danger-800: #47171d;
 
-  --color-warning-50:  #FDFAEE;
-  --color-warning-100:  #FBF5DD;
-  --color-warning-200:  #F7EABB;
-  --color-warning-300:  #F3E09A;
-  --color-warning-400:  #EFD578;
-  --color-warning-500:  #EBCB56;
-  --color-warning-600:  #C1A645;
-  --color-warning-700:  #968135;
-  --color-warning-800:  #6C5C24;
+  --color-warning-50: #fdfaee;
+  --color-warning-100: #fbf5dd;
+  --color-warning-200: #f7eabb;
+  --color-warning-300: #f3e09a;
+  --color-warning-400: #efd578;
+  --color-warning-500: #ebcb56;
+  --color-warning-600: #c1a645;
+  --color-warning-700: #968135;
+  --color-warning-800: #6c5c24;
 
-  --color-light: #FFFDFA;
+  --color-light: #fffdfa;
   --color-dark: #0c1621;
 }
 
-a{
+a {
   @apply text-primary-500 hover:underline;
 }
