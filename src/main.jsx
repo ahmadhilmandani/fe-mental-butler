@@ -1,18 +1,27 @@
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
 import './index.css'
-import App from './App.jsx'
 
 import {
   createBrowserRouter,
   RouterProvider,
 } from "react-router";
+import LoginIndex from './pages/Login/Index.jsx';
+import MainLayout from './layouts/MainLayout.jsx';
+import DashboardIndex from './pages/Dashboard/Index.jsx';
 
 
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <App />,
+    element: <LoginIndex />,
+  },
+  {
+    path: "/dashboard",
+    Component: MainLayout ,
+    children: [
+      { index: true, Component: DashboardIndex },
+    ],
   },
 ]);
 

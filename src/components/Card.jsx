@@ -1,6 +1,6 @@
-export default function Card({ children }) {
+export default function Card({ children, isExtend = false }) {
   return (
-    <div className="w-full max-w-md p-4 bg-white border border-gray-200 rounded-xl sm:p-6 md:p-8 dark:bg-gray-800 dark:border-gray-700">
+    <div className={`${isExtend ? 'w-full': 'w-full max-w-lg'} p-4 bg-white border border-gray-200 rounded-xl sm:p-6 md:p-8 dark:bg-gray-800 dark:border-gray-700 dark:text-light relative overflow-hidden h-fit`}>
       {children}
     </div>
   )
