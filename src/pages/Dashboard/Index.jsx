@@ -27,7 +27,7 @@ export default function DashboardIndex() {
               <strong className="block text-center mx-auto text-primary-500 mb-8 text-3xl">
                 Hi, Are you okay??
               </strong>
-              <p className="mb-5 text-2xl text-gray-400 italic text-center">
+              <p className="mb-5 text-2xl leading-[160%] text-gray-400 italic text-center">
                 “Patah hati memang perih, tetapi ia akan membuatmu semakin kuat dan bijak”
               </p>
               <div className="italic text-center text-gray-400"> - Your Mental Butler - </div>

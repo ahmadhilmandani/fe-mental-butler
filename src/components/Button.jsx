@@ -29,7 +29,7 @@ export default function Button({ buttonType = BUTTON_TYPE.DEFAULT, isExtend = fa
   else if (buttonType == BUTTON_TYPE.DANGER) {
     return (
       <>
-        <button type="button" className={`flex justify-center items-center gap-3 text-danger-500 dark:text-danger-50 bg-danger-100 hover:bg-danger-200 font-medium rounded-lg text-sm px-6 py-2 dark:bg-danger-700 dark:hover:bg-danger-600 ring-0 focus:outline-none transition-all cursor-pointer ${isExtend && 'w-full'}`}>
+        <button type="button" className={`flex justify-center items-center gap-3 text-danger-500 dark:text-danger-50 bg-danger-50 hover:bg-danger-100 font-medium rounded-lg text-sm px-6 py-2 dark:bg-danger-700 dark:hover:bg-danger-600 ring-0 focus:outline-none transition-all cursor-pointer ${isExtend && 'w-full'}`}>
           {children}
         </button>
       </>
