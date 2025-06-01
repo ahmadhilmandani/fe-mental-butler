@@ -1,7 +1,5 @@
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
-import { ReactQueryDevtools } from '@tanstack/react-query-devtools'
-import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 
 
 import './index.css'
@@ -14,10 +12,10 @@ import LoginIndex from './pages/Login/Index.jsx';
 import MainLayout from './layouts/MainLayout.jsx';
 import DashboardIndex from './pages/Dashboard/Index.jsx';
 import JournalIndex from './pages/Journal/Index.jsx';
+import { Provider } from 'react-redux';
+import store from './redux/store.js';
 
 
-
-const queryClient = new QueryClient()
 
 const router = createBrowserRouter([
   {
@@ -44,9 +42,8 @@ const router = createBrowserRouter([
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <QueryClientProvider client={queryClient}>
-      <ReactQueryDevtools initialIsOpen={false} />
+    <Provider store={store}>
       <RouterProvider router={router} />
-    </QueryClientProvider>
-  </StrictMode>,
+    </Provider>
+  </StrictMode>
 )
