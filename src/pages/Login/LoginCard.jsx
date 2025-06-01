@@ -9,7 +9,7 @@ export default function LoginCard() {
   return (
     <>
       <Card>
-        <img src={LogoDark} alt="Logo of Mental Butler" className="mx-auto w-36" />
+        <img src={LogoLight} alt="Logo of Mental Butler" className="mx-auto w-36" />
         <div className="mt-5">
           <Input labelProp={'Email'} placeholderProp={'example@gmail.com'} typeProp={'email'} inputId={'email'} />
         </div>

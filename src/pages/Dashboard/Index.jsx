@@ -8,8 +8,8 @@ export default function DashboardIndex() {
     <>
       <main className="w-full min-h-screen p-10 ">
         <header className="mb-8">
-        <h1 className="dark:text-light text-3xl font-bold mb-3">
-          Hi, Ahmad Hilman Dani! 👋
+          <h1 className="dark:text-light text-3xl font-bold mb-3">
+            Hi, Ahmad Hilman Dani! 👋
           </h1>
           <div className="text-gray-500">
             Selamat Datang Kembali di Mental Butler mu!

@@ -32,7 +32,6 @@ export default function Sidebar() {
           <Button isExtend={true} buttonType="danger">
             Keluar
           </Button>
-
         </div>
       </div>
     </aside>
