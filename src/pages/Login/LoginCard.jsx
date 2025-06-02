@@ -2,35 +2,42 @@ import Card from "../../components/Card";
 import Input from "../../components/Input";
 import LogoLight from "../../assets/logo/logo-mental-butler-dark.png"
 import LogoDark from "../../assets/logo/logo-mental-butler-light.png"
-import { Link } from "react-router";
+import { Link, useNavigate } from "react-router";
 import Button from "../../components/Button"
 import { useState } from "react";
 import { fetchLogin } from "../../api/fetchLogin";
-import { useDispatch } from "react-redux";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { setButtonLoader } from "../../redux/slices/loaderSlice";
+import { toast } from "react-toastify";
 
 export default function LoginCard() {
-  const [emailOrUsername, setEmailOrUsername] = useState()
-  const [password, setPassword] = useState()
+  const [emailOrUsername, setEmailOrUsername] = useState('')
+  const [password, setPassword] = useState('')
 
   const dispatch = useDispatch()
+  const navigate = useNavigate()
+
 
   const buttonLoader = useSelector((state) => state.loaderSlice.buttonLoader)
+
   
-  // console.log()
-
   const handleLogin = async () => {
-    try {
-      dispatch(setButtonLoader(true))
-      const rest = await fetchLogin({ "email_or_username": emailOrUsername, "password": password })
 
+    dispatch(setButtonLoader(true))
+    const rest = await fetchLogin({ "email_or_username": emailOrUsername, "password": password })
+
+    console.log(rest)
+
+    if (rest.data?.is_error) {
       console.log(rest)
-    } catch (error) {
-      console.log(error)
-    } finally {
-      dispatch(setButtonLoader(false))
+      toast.error(rest.data.msg);
+    } else {
+      localStorage.setItem('token', rest.data.data.token)
+      toast.success('Selamat Datang, di Mental Butler');
+      navigate('/dashboard')
     }
+    dispatch(setButtonLoader(false))
+
   }
 
 
@@ -54,11 +61,11 @@ export default function LoginCard() {
         </div>
 
         <div className="my-5">
-          {!buttonLoader && 
-          <Button onClickProp={handleLogin} buttonType={'primary'} isExtend={true}>
+
+          <Button onClickProp={handleLogin} buttonType={'primary'} isExtend={true} isLoading={buttonLoader}>
             Login
           </Button>
-          }
+
         </div>
 
         <div className="flex gap-1 jusc items-center">
