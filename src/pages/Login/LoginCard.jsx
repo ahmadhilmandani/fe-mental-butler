@@ -1,7 +1,5 @@
 import Card from "../../components/Card";
 import Input from "../../components/Input";
-import LogoLight from "../../assets/logo/logo-mental-butler-dark.png"
-import LogoDark from "../../assets/logo/logo-mental-butler-light.png"
 import { Link, useNavigate } from "react-router";
 import Button from "../../components/Button"
 import { useState } from "react";
@@ -44,9 +42,13 @@ export default function LoginCard() {
   return (
     <>
       <Card>
-        <img src={LogoLight} alt="Logo of Mental Butler" className="mx-auto w-36" />
+        <div className="mb-8">
+        <h1 className="text-center text-2xl mb-3 font-bold">
+          Selamat Datang!
+          </h1>
+          <small className="text-gray-400 mx-auto text-center block">Sebelumnya, login terlebih dahulu, ya!</small>
+        </div>
         <div className="mt-5">
-          {/* <input type="text" onChange={} /> */}
           <Input onChangeProp={setEmailOrUsername} labelProp={'Email atau Username'} placeholderProp={'cth: username; user@gmail.com'} typeProp={'text'} inputId={'emailOrUsername'} />
         </div>
         <div className="mt-5">

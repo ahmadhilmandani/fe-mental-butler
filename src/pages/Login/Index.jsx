@@ -1,9 +1,12 @@
 import LoginCard from "./LoginCard";
+import LogoLight from "../../assets/logo/logo-mental-butler-dark.png"
+import LogoDark from "../../assets/logo/logo-mental-butler-light.png"
 
 export default function LoginIndex() {
   return (
     <>
-      <div className='bg-light dark:bg-dark w-full min-h-screen flex justify-center items-center relative overflow-hidden'>
+      <div className='bg-light dark:bg-dark w-full min-h-screen flex flex-col justify-center items-center relative overflow-hidden'>
+        <img src={LogoLight} alt="Logo of Mental Butler" className="mx-auto w-48 mb-12" />
         <div className='relative z-10 w-full max-w-lg'>
           <LoginCard />
         </div>
