@@ -15,6 +15,7 @@ import JournalIndex from './pages/Journal/Index.jsx';
 import { Provider } from 'react-redux';
 import store from './redux/store.js';
 import { Bounce, ToastContainer } from 'react-toastify';
+import RegisterIndex from './pages/Register/Index.jsx';
 
 
 
@@ -22,6 +23,10 @@ const router = createBrowserRouter([
   {
     path: "/",
     element: <LoginIndex />,
+  },
+  {
+    path: '/register',
+    Component: RegisterIndex
   },
   {
     path: "/dashboard",

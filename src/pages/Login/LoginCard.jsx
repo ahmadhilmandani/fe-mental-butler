@@ -18,7 +18,7 @@ export default function LoginCard() {
 
   const buttonLoader = useSelector((state) => state.loaderSlice.buttonLoader)
 
-  
+
   const handleLogin = async () => {
 
     dispatch(setButtonLoader(true))
@@ -43,10 +43,10 @@ export default function LoginCard() {
     <>
       <Card>
         <div className="mb-8">
-        <h1 className="text-center text-2xl mb-3 font-bold">
-          Selamat Datang!
+          <h1 className="text-center text-2xl mb-3 font-bold">
+            Selamat Datang!
           </h1>
-          <small className="text-gray-400 mx-auto text-center block">Sebelumnya, login terlebih dahulu, ya!</small>
+          <small className="text-gray-500 mx-auto text-center block">Sebelumnya, login terlebih dahulu, ya!</small>
         </div>
         <div className="mt-5">
           <Input onChangeProp={setEmailOrUsername} labelProp={'Email atau Username'} placeholderProp={'cth: username; user@gmail.com'} typeProp={'text'} inputId={'emailOrUsername'} />
@@ -72,9 +72,9 @@ export default function LoginCard() {
 
         <div className="flex gap-1 jusc items-center">
           <div className="dark:text-light text-dark">
-            You Don't Have Account?
+            Belum punya akun?
           </div>
-          <Link className="font-semibold link-primary-color">Register Here!</Link>
+          <Link to={'/register'} className="font-semibold link-primary-color">Daftar di Sini!</Link>
         </div>
       </Card>
     </>
