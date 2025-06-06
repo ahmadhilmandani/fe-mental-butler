@@ -25,7 +25,7 @@ export default function Button({ onClickProp = () => { }, buttonType = BUTTON_TY
   else if (buttonType == BUTTON_TYPE.SECONDARY) {
     return (
       <>
-        <button onClick={onClickProp} type="button" className={`flex justify-center items-center gap-3 text-primary-500 dark:text-primary-50 bg-primary-100 hover:bg-primary-200 font-medium rounded-lg text-sm px-6 py-2 dark:bg-primary-700 dark:hover:bg-primary-600 ring-0 focus:outline-none transition-all ${isExtend && 'w-full'} ${isLoading && 'cursor-not-allowed'}`}>
+        <button onClick={onClickProp} type="button" className={`flex justify-center items-center gap-3 text-primary-500 dark:text-primary-50 bg-primary-50 hover:bg-primary-200 font-medium rounded-lg text-sm px-6 py-2 dark:bg-primary-700 dark:hover:bg-primary-600 ring-0 focus:outline-none transition-all ${isExtend && 'w-full'} ${isLoading && 'cursor-not-allowed'}`}>
           {isLoading && <IconLoader2 className="animate-spin text-sm" />}
           {children}
         </button>

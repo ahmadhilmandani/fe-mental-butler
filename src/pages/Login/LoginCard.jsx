@@ -25,12 +25,11 @@ export default function LoginCard() {
     const rest = await fetchLogin({ "email_or_username": emailOrUsername, "password": password })
 
     console.log(rest)
-
     if (rest.data?.is_error) {
-      console.log(rest)
       toast.error(rest.data.msg);
     } else {
       localStorage.setItem('token', rest.data.data.token)
+      localStorage.setItem('userId', rest.data.data.user_id)
       toast.success('Selamat Datang, di Mental Butler');
       navigate('/dashboard')
     }

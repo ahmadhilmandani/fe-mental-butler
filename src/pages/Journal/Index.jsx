@@ -1,3 +1,4 @@
+import { Link } from "react-router";
 import Button from "../../components/Button";
 import Card from "../../components/Card";
 import Table from "../../components/Table";
@@ -15,9 +16,11 @@ export default function JournalIndex() {
           </div>
         </div>
         <div>
-          <Button buttonType="primary">
-            Tambah Journal +
-          </Button>
+          <Link to={'/journal/add'}>
+            <Button buttonType="primary">
+              Tambah Journal +
+            </Button>
+          </Link>
         </div>
       </header>
       <div className="h-fit max-h-screen">

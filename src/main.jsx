@@ -16,6 +16,7 @@ import { Provider } from 'react-redux';
 import store from './redux/store.js';
 import { Bounce, ToastContainer } from 'react-toastify';
 import RegisterIndex from './pages/Register/Index.jsx';
+import JournalAdd from './pages/Journal/JournalAdd.jsx';
 
 
 
@@ -39,7 +40,8 @@ const router = createBrowserRouter([
     path: "/journal",
     Component: MainLayout,
     children: [
-      { index: true, Component: JournalIndex }
+      { index: true, Component: JournalIndex },
+      { path: 'add', Component: JournalAdd },
     ]
   }
 ]);
